@@ -1,27 +1,24 @@
-First we should make sure that the environment is properly setup by checking the minikube version.
+## Intro to Kubernetes
+
+Kubernetes is built around the concept of **clusters**.  There are two types of resources in each cluster:
+
+1. A master which coordinates everything in the cluster.  This is what we will interact with the most.
+2. Nodes which contain one or more containers.
+
+A node is usually a VM or physical machine.
+
+The advantage of this is approach is that we can deploy our containerized applications to a cluster, and the master will handle the deployment to a specific machine.
+
+## Minikube
+
+This workshop will use Minikube to setup a sample cluster and deployment.
+
+Minikube sets up a single-node Kubernetes cluster inside a VM and is for local development.
+
+To verify that Minikube is installed and setup in your workshop environment execute the following to check the version:
 
 `minikube version`{{execute}}
 
-Once we've verified it is running, start a new cluster by running the *minikube start* command:
+The cluster should be started by running the following:
 
-`minikube start`{{execute}}
-
-This will start a Kubernetes cluster in the terminal.  Minikube will have started a virtual machine, and the Kubernetes cluster is running in this newly created VM.
-
-
-Etcd is a "Distributed reliable key-value store for the most critical data of a distributed system". Kubernetes uses Etcd to store state about the cluster and service discovery between nodes. This state includes what nodes exist in the cluster, which nodes they are running on and what containers should be running.
-
-The command below will launch a single node etcd cluster listening on port 4001.
-`
-docker run -d --name=etcd \
-    --net=host \
-    gcr.io/google_containers/etcd:2.2.1 \
-    /usr/local/bin/etcd \
-    --listen-client-urls=http://0.0.0.0:4001 \
-    --advertise-client-urls=http://0.0.0.0:4001 \
-    --data-dir=/var/etcd/data
-`{{execute}}
-
-The _net=host_ means the container will share the same network as the host, removing the need to map ports.
-
-In production you would want to run etcd on three separate machines to ensure maximum availability.
+`minikube start` {{execute}}

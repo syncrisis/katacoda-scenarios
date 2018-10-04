@@ -3,6 +3,9 @@
   "description": "How to Deploy a Python WebAPI with Kubernetes",
   "difficulty": "beginner",
   "time": "15 minutes",
+  "backend": {
+	"port": 30000,
+	"imageid": "minikube"
   "details": {
     "steps": [
 		{
@@ -10,7 +13,7 @@
 		  "text": "step1.md"
 		},
 		{
-		  "title": "Step 2 - Setup Minikube",
+		  "title": "Step 2 - Setup Kubernetes",
 		  "text": "step2.md"
 	    },
 		{

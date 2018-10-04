@@ -6,8 +6,8 @@ According to the [Kuberenetes Website](https://kubernetes.io/docs/tutorials/kube
 
 In other words, it is a way to deploy our containerized applications in a controlled way.
 
-## Task
+## Executing Commands
 
-This is an _example_ of creating a scenario and running a **command**
+In this workshop, you can either type the commands directly into the terminal, or you can click the command below:
 
 `echo 'Hello World'`{{execute}}

@@ -1,14 +1,3 @@
-First we should make sure that the environment is properly setup by checking the minikube version.
-
-`minikube version`{{execute}}
-
-Once we've verified it is running, start a new cluster by running the *minikube start* command:
-
-`minikube start`{{execute}}
-
-This will start a Kubernetes cluster in the terminal.  Minikube will have started a virtual machine, and the Kubernetes cluster is running in this newly created VM.
-
-
 Etcd is a "Distributed reliable key-value store for the most critical data of a distributed system". Kubernetes uses Etcd to store state about the cluster and service discovery between nodes. This state includes what nodes exist in the cluster, which nodes they are running on and what containers should be running.
 
 The command below will launch a single node etcd cluster listening on port 4001.

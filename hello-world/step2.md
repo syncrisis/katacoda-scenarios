@@ -21,4 +21,4 @@ To verify that Minikube is installed and setup in your workshop environment exec
 
 The cluster should be started by running the following:
 
-`minikube start` {{execute}}
+`minikube start`{{execute}}

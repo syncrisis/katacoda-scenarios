@@ -1,16 +1,11 @@
-Etcd is a "Distributed reliable key-value store for the most critical data of a distributed system". Kubernetes uses Etcd to store state about the cluster and service discovery between nodes. This state includes what nodes exist in the cluster, which nodes they are running on and what containers should be running.
+## Basic commands (Kubernets... not that BASIC) 
 
-The command below will launch a single node etcd cluster listening on port 4001.
-`
-docker run -d --name=etcd \
-    --net=host \
-    gcr.io/google_containers/etcd:2.2.1 \
-    /usr/local/bin/etcd \
-    --listen-client-urls=http://0.0.0.0:4001 \
-    --advertise-client-urls=http://0.0.0.0:4001 \
-    --data-dir=/var/etcd/data
-`{{execute}}
+Now that we have minikube running, we can check the status of our cluster and it's nodes.
 
-The _net=host_ means the container will share the same network as the host, removing the need to map ports.
+The following command will tell us where our cluster's master is running:
 
-In production you would want to run etcd on three separate machines to ensure maximum availability.
+`kubectl cluster-info`{{execute}}
+
+We can also get node specific information by using:
+
+`kubectl get nodes`{{execute}}

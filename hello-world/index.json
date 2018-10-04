@@ -18,8 +18,12 @@
 		  "text": "step2.md"
 	    },
 		{
-		  "title": "Step 3 - Cheat Sheet",
+		  "title": "Step 3 - Basic Commands",
 		  "text": "step3.md"
+		},
+		{
+		 "title": "Step 4 - Launcher",
+		 "text": "step4.md"
 		}
 	],
     "intro": {

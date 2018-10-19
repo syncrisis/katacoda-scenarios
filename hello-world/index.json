@@ -3,10 +3,6 @@
   "description": "How to Deploy a Python WebAPI with Kubernetes",
   "difficulty": "beginner",
   "time": "15 minutes",
-  "backend": {
-	"port": 30000,
-	"imageid": "minikube"
-  },
   "details": {
     "steps": [
 		{
@@ -36,11 +32,12 @@
     }
   },
   "environment": {
-    "uilayout": "terminal",
-    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nStart Kubernetes using `launch.sh`\u001b[m\r\n"
+    "uilayout": "terminal-iframe",
+	"icon": "fa-minikube",
+	"uimessage1": "\u001b[32mYour Interactive Bash Terminal\u001b[m\r\n"
   },
   "backend": {
 	"port": 8080,
-    "imageid": "kubernetes"
+    "imageid": "minikube"
   }
 }

@@ -4,7 +4,7 @@ According to the [Kuberenetes Website](https://kubernetes.io/docs/tutorials/kube
 
 > Kubernetes is a production-grade, open-source platform that orchestrates the placement (scheduling) and execution of application containers within and across computer clusters.
 
-In other words, it is a way to deploy our containerized applications in a controlled way.
+In other words, it is a way to deploy and manage our containerized applications in a controlled way.
 
 ## Executing Commands
 
